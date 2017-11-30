@@ -1,7 +1,7 @@
 const Authentication = require('./controllers/authentication');
 const passportService = require('./services/passport');
 const passport = require('passport');
-// disables the session
+// specify to use the middleware and disable session
 const requireAuth = passport.authenticate('jwt', { session: false });
 
 module.exports = app => {
